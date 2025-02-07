@@ -8,8 +8,8 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/clima', [AemetController::class, 'getWeather']);
 Route::get('/test', function () {
     return response()->json(['message' => 'API funcionando']);
 });
 
+Route::get('/estaciones', [AemetController::class, 'getWeatherStations']);

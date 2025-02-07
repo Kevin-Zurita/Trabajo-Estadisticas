@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Services\AemetService;
@@ -13,10 +14,9 @@ class AemetController extends Controller
         $this->aemetService = $aemetService;
     }
 
-    public function getWeather(Request $request)
+    public function getWeatherStations()
     {
-        $location = $request->input('location');
-        $weatherData = $this->aemetService->getWeatherData($location);
-        return response()->json($weatherData);
+        $stations = $this->aemetService->getWeatherStations();
+        return response()->json($stations);
     }
 }
