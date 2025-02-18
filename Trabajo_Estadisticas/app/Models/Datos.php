@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-class Dato extends Model
+class Datos extends Model
 {
 	protected $table = 'datos';
 	public $timestamps = false;

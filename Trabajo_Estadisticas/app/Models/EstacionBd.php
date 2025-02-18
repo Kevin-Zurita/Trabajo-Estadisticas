@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property int|null $estado
  * 
- * @property Collection|Dato[] $datos
+ * @property Collection|Datos[] $datos
  * @property Collection|Stat[] $stats
  *
  * @package App\Models
@@ -37,7 +37,7 @@ class EstacionBd extends Model
 
 	public function datos()
 	{
-		return $this->hasMany(Dato::class, 'id_estacion');
+		return $this->hasMany(Datos::class, 'id_estacion');
 	}
 
 	public function stats()
